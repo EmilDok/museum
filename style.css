@@ -1,0 +1,1122 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul,
+ol {
+  list-style: none;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+
+body{
+    background-color: #1D2926;
+    background-image: url('../images/texture.png');
+    font-family: "Roboto", sans-serif;
+    min-height: 100vh;
+    font-size: 16px;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    letter-spacing: 0.3px;
+    overflow-x: hidden;
+    padding-top: calc(130px + 30 * (100vw / 1780));
+}
+
+.container{
+    max-width: 1780px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+h1, h2, h3, h4, h5, h6{
+    color: #fff;
+    font-family: "BebasNeue", sans-serif;
+    font-weight: bold;
+}
+
+h1{
+    font-size: calc(28px + 29 * (100vw / 1760));
+    /* font-size: 54px; */
+    font-weight: bold;
+    position: relative;
+    margin-bottom: calc(40px + 40 * (100vw / 1780));
+}
+
+h1:after{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: calc(-8px - 7 * (100vw / 1780));
+    left: 0;
+    width: calc(85px + 15 * (100vw / 1780));
+    height: 8px;
+    background-image: url('images/underscore.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+h4{
+    font-size: calc(28px + 4 * (100vw / 1780));
+    font-weight: 400;
+    position: relative;
+    margin-bottom: 70px;
+}
+
+h4:after{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+    width: 70px;
+    height: 8px;
+    background-image: url('images/underscore.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+h2{
+    font-size: calc(22px + 16 * (100vw / 1780));
+}
+
+section{
+    margin-bottom: 7vw;
+}
+
+.button, button{
+    color: #000;
+    font-family: "BebasNeue", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 12px 45px;
+    line-height: 1;
+    background-color: var(--accent);
+    /* box-shadow: 4px 4px 0px 0 #5F3E20; */
+    position: relative;
+    top: -2px;
+    left: -2px;
+    transition: .15s ease;
+    display: inline-block;
+}
+
+.button::before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    background-image: url('images/arrow-small.svg');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    right: 20px;
+    top: 0;
+    bottom: 2px;
+    margin: auto 0;
+    transition: .15s ease;
+}
+
+.button::after, button::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #5F3E20;
+    top: 5px;
+    left: 5px;
+    z-index: -2;
+    transition: .2s ease;
+}
+
+.button:hover, button:hover{
+    top: 0px;
+    left: 0px;
+}
+
+.button:hover::after, button:hover::after{
+    top: 0px;
+    left: 0px;
+}
+
+button{
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+p{
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.75;
+    letter-spacing: 0.4px;
+}
+
+/* Переменные */
+
+:root {
+    --accent: #FFA95A;
+    --secondaccent: #E4B284;
+    --sectionmargin: 9.5vw;
+    --margintitle: 3.5vw;
+}
+
+
+/* Основные стили */
+
+/* Header */
+
+header{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: calc(50px + 30 * (100vw / 1780));
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    top: 0;
+    background-color: rgba(29, 41, 38, 0.85);
+}
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 20px;
+}
+
+header .container .menu .menu_items{
+    display: flex;
+    justify-content: space-between;
+}
+
+header .container .menu .menu_items li{
+    margin-right: calc(7px + 35 * (100vw / 1780));
+}
+
+header .container .menu .menu_items a{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    position: relative;
+    transition: .25s ease;
+    font-size: calc(14px + 2 * (100vw / 1780));
+}
+
+header .container .menu .menu_items li:last-child{
+    margin: 0;
+}
+
+header .container .menu .menu_items a::after{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--accent);
+    height: 2px;
+    width: 0%;
+    transition: .25s ease;
+}
+
+header .container .menu .menu_items a:hover{
+    color: var(--accent);
+}
+
+header .container .menu .menu_items a:hover::after{
+    width: 100%;
+}
+
+header .logo, footer .logo{
+    width: calc(150px + 50 * (100vw / 1780));
+}
+
+/* burger */
+
+.burger_menu {
+    cursor: pointer;
+    height: 27px;
+    width: 27px;
+    overflow: visible;
+    position: relative;
+    z-index:2;
+    display: none;
+    margin: 0 10px 0 0;
+}
+.burger_menu span,
+.burger_menu span:before,
+.burger_menu span:after {
+    background: #fff;
+    display: block;
+    height: 3px;
+    opacity: 1;
+    position: absolute;
+    transition: 0.3s ease-in-out;
+}
+.burger_menu span:before,
+.burger_menu span:after {
+    content: "";
+}
+.burger_menu span {
+    right: 0px;
+    top: 13px;
+    width: 31px;
+}
+.burger_menu span:before {
+    left: 0px;
+    top: -10px;
+    width: 20px;
+}
+.burger_menu span:after {
+    left: 0px;
+    top: 10px;
+    width: 24px;
+}
+
+.burger_menu.close span {
+    transform: rotate(-45deg);
+    top: 13px;
+    width: 27px;
+}
+.burger_menu.close span:before {
+    top: 0px;
+    transform: rotate(90deg);
+    width: 27px;
+}
+.burger_menu.close span:after {
+    top: 0px;
+    left:0;
+    transform: rotate(90deg);
+    opacity:0;
+    width:0;
+}
+
+/* slider */
+
+.our_artefacts{
+    margin: 0;
+}
+
+.slider_container{
+    margin-bottom: 30px;
+    overflow-x: hidden;
+}
+
+.slider_container .swiper-slide .descr_item_container {
+    width: 100%;
+    height: fit-content;
+    position: absolute;
+    bottom: 30px;
+    right: 0;
+    left: 0;
+    padding: 0 30px;
+}
+
+.slider_container .swiper-slide .item_pic{
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: .3s ease;
+}
+
+.slider_container .swiper-slide .images_container{
+    height: calc(100px + 400 * (100vw / 1780));
+    transition: 1s ease;
+    display: flex;
+    justify-content: space-between;
+    gap: 0.95vw;
+}
+
+
+.slider_container .swiper-slide .images_container .item_pic{
+    width: 8.33333%;
+    transition: all 0.8s cubic-bezier(0.51, 0, 0.03, 0.96) 0s;
+}
+
+.slider_container .swiper-slide .images_container .item_pic:nth-child(1){
+    width: 75%;
+    position: relative;
+    display: flex;
+    justify-content: stretch;
+    align-items: end;
+    padding: 30px;
+}
+
+.slider_container .swiper-slide .images_container .item_pic:nth-child(n + 2):hover{
+    width: 50%;
+}
+
+.slider_container .swiper-slide .descr_item_container .museum_year_container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.slider_container .swiper-slide .descr_item_container .museum_year_container a{
+    font-size: calc(14px + 2 * (100vw / 1780));
+    font-weight: 300;
+    position: relative;
+    display: flex;
+    align-items: center;
+    transition: .4s ease;
+}
+
+.slider_container .swiper-slide .descr_item_container .museum_year_container a:hover::before{
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.slider_container .swiper-slide .descr_item_container .museum_year_container a:before{
+    content: "";
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    border: 1.8px solid #fff;
+    transform: rotate(45deg);
+    margin: 0 7px 0 0;
+    background-color: rgba(255, 255, 255, 0);
+    transition: .3s ease;
+}
+
+.slider_container .swiper-slide .descr_item_container .museum_year_container .year {
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: calc(12px + 4 * (100vw / 1780));
+}
+
+/* thumbs slider */
+
+
+.slider_container_with_thumbs {
+    margin-top: 15px;
+    display: none;
+}
+
+
+.slider_container_with_thumbs .swiper-slide{
+    width: calc(50px + 100 * ( 100vw / 1780 ));
+    height: calc(50px + 100 * ( 100vw / 1780 ) - 2px);
+    cursor: pointer;
+    padding: 2px;
+    transition: .3s ease;
+}
+
+.slider_container_with_thumbs .swiper-slide-thumb-active{
+    /* border: 2px solid var(--accent); */
+    box-shadow: inset 0 0 0 2px var(--accent);
+}
+
+.slider_container_with_thumbs .swiper-wrapper{
+    padding-bottom: 5px;
+}
+
+/* arrows */
+
+.timetabs_arrows{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 25px 0;
+}
+
+.timetabs_arrows .timetabs{
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    color: var(--secondaccent);
+    font-weight: normal;
+}
+
+.timetabs_arrows .timetabs li{
+    cursor: pointer;
+    transition: .2s ease;
+    position: relative;
+}
+
+.timetabs_arrows .timetabs li:nth-child(1):after{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--secondaccent);
+    transition: .2s ease;
+}
+
+.timetabs_arrows .timetabs li:hover{
+    color: #775F49;
+}
+
+.timetabs_arrows .timetabs li:hover::after{
+    background-color: #775F49;
+}
+
+.arrows_container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 8.33333%;
+    min-width: 120px;
+}
+
+.arrows_container  .swiper-button-prev, .arrows_container  .swiper-button-next {
+    position: relative;
+    width: calc(50% - 20px);
+    height: unset;
+    margin: 0;
+    left: unset;
+    right: unset;
+    transition: .25s ease;
+}
+
+.arrows_container img:hover{
+    opacity: 0.5;
+}
+
+/* share archives */
+
+.share_archives{
+    position: relative;
+    padding-top: calc(40px + 95 * (100vw / 1780))
+}
+
+.share_archives h1{
+    margin-bottom: 25px;
+}
+
+.share_archives span{
+    font-size: calc(14px + 6 * (100vw / 1780));
+    font-family: "Roboto", sans-serif;
+    color: #fff;
+    font-weight: 300;
+}
+
+.share_archives .form_contacts_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: calc(20px + 80 * (100vw / 1780));
+    margin-top: calc(35px + 40 * (100vw / 1780));
+}
+
+.share_archives .form_contacts_container form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+}
+
+.share_archives .form_contacts_container form *:nth-child(n + 3){
+    grid-column: 1 / 3;
+}
+
+.share_archives .form_contacts_container form input, .share_archives .form_contacts_container form textarea{
+    background-color: rgba(0,0,0,.1);
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, .07);
+    padding: 15px 0;
+    text-indent: 15px;
+    outline: none;
+    color: #fff;
+    width: 100%;
+    transition: .2s ease;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    border-radius: 0;
+}
+
+.share_archives .form_contacts_container form input:focus, .share_archives .form_contacts_container form textarea:focus{
+    background-color: rgba(240, 240, 240, 0.05);
+}
+
+.share_archives .form_contacts_container form textarea{
+    min-height: 140px;
+    resize: none;
+}
+
+.share_archives .form_contacts_container .contacts_container{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-content: space-between;
+    align-content: space-evenly;
+    padding: 0 0 0 3vw;
+}
+
+.share_archives::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 38vw;
+    height: 100%;
+    right: 10vw;
+    top: 90px;
+    background-image: url('images/bg-contacts.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    z-index: -1;
+}
+
+
+.share_archives .form_contacts_container .contacts_container .contacts_item{
+    align-items: center;
+}
+
+.share_archives .form_contacts_container .contacts_container .contacts_item h3{
+    font-size: 28px;
+    color: var(--secondaccent);
+    margin-bottom: calc(7px + 3 * (100vw / 1780));
+}
+
+.share_archives .form_contacts_container .contacts_container .contacts_item a{
+    font-size: calc(14px + 2 * (100vw / 1780));
+    font-family: "Roboto", sans-serif;
+    font-weight: 200;
+    transition: .2s ease;
+}
+
+
+.share_archives .form_contacts_container .contacts_container .contacts_item a:hover{
+    opacity: 0.5;
+}
+
+
+/* our partners */
+.our_partners {
+    overflow-x: hidden;
+}
+.container {
+}
+.our_partners .swiper2 {
+    margin-top: var(--margintitle);
+    /* margin-top: 80px; */
+}
+
+.our_partners .swiper-slide {
+    background-color: #fff;
+    min-width: 270px;
+    height: 10vw;
+    min-height: 100px;
+    max-height: 140px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    border-radius: 2px;
+}
+
+.our_partners .swiper-slide img{
+    height: 90%;
+    margin: auto;
+}
+
+/* footer */
+
+footer{
+    margin-top: 100px;
+    padding: 25px 0;
+    border-top: 1px solid rgba(255, 255, 255, .1);
+}
+
+footer .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 25px;
+    line-height: 1.45;
+}
+
+.container .logo_contacts .contacts_container{
+    margin-top: 30px;
+}
+
+.container .logo_contacts img{
+    margin-top: 13px;
+}
+
+.container .logo_contacts .contacts_container a{
+    margin-bottom: 20px;
+    display: block;
+    font-size: 14px;
+    font-weight: 300;
+    transition: .2s ease;
+}
+
+.container .logo_contacts .contacts_container a:hover{
+    opacity: 0.6;
+}
+
+.wcommunity_wrap{
+    background: transparent!important;
+}
+
+/*  artefacts_by_museum */
+
+.artefacts_by_mueum{
+    overflow-x: hidden;
+}
+
+.artefacts_by_mueum .artefacts_container{
+    max-width: 1800px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+.artefacts_by_mueum .artefacts_container .artefact_pic{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: calc(100px + 150 * (100vw / 1780));
+    width: calc(25% - 25px);
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+.artefacts_by_mueum .artefacts_container  .double_height{
+    min-height: calc( 20px + 2 * ( 100px + 150 * (100vw / 1780) ));
+}
+
+.artefacts_by_mueum .artefacts_container .artefact_pic:hover img{
+    transform: scale(1.07);
+}
+
+.artefacts_by_mueum .artefacts_container .artefact_pic img{
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s cubic-bezier(0.31, 0.55, 0.68, 0.65);
+}
+
+.artefacts_by_mueum .artefacts_container .artefact_pic:hover:before{
+    opacity: 0.7;
+}
+
+.artefacts_by_mueum .artefacts_container .artefact_pic:before{
+    content: "";
+    display: block;
+    position: absolute;
+    background: linear-gradient(180deg, rgba(0,0,0,.1) 0%, rgba(0,0,0,.8));
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.5s cubic-bezier(0.31, 0.55, 0.68, 0.65);
+}
+
+
+.artefacts_by_mueum .artefacts_container .artefact_pic .descr_container{
+    width: 100%;
+    padding: 20px;
+    color: #fff;
+    z-index: 1;
+}
+
+.artefacts_by_mueum .artefacts_container .artefact_pic .descr_container h3{
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 2px;
+}
+
+.artefacts_by_mueum .artefacts_container .artefact_pic .descr_container span{
+    font-size: 12px;
+    font-weight: 300;
+}
+
+
+.artefacts_by_mueum .museums_to_sort_by, .specific_works .areas_to_sort_by {
+    margin-bottom: 50px;
+}
+
+.artefacts_by_mueum .museums_to_sort_by .swiper-slide, .specific_works .areas_to_sort_by .swiper-slide {
+    padding: 14px 50px;
+    border-radius: 50px;
+    display: flex!important;
+    justify-content: space-between;
+    background-size: 100% auto;
+    background-position: center;
+    align-items: center;
+    text-align: center;
+    width: max-content;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: .2s ease;
+}
+
+.artefacts_by_mueum .swiper-slide:first-child, .specific_works .areas_to_sort_by .swiper-slide:first-child{
+    box-shadow: 0px 0px 0px 2px var(--secondaccent);
+}
+
+.artefacts_by_mueum .museums_to_sort_by .swiper-slide:hover, .specific_works .areas_to_sort_by .swiper-slide:hover{
+    background-size: 108% auto;
+    filter: brightness(1.4);
+}
+
+.artefacts_by_mueum .museums_to_sort_by .active_museum:hover, .specific_works .areas_to_sort_by .active_museum:hover{
+    box-shadow: 0px 0px 0px 2px var(--accent);
+    filter: brightness(1);
+}
+
+
+.artefacts_by_mueum .museums_to_sort_by .swiper-slide:first-child:hover span, .specific_works .areas_to_sort_by .swiper-slide:first-child:hover span{
+    opacity: 1;
+}
+
+.artefacts_by_mueum .museums_to_sort_by  .swiper-slide span, .specific_works .areas_to_sort_by .swiper-slide span{
+    text-align: center;
+    width: 100%;
+    color: #fff;
+    font-family: "BebasNeue", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    transition: .3s ease;
+    opacity: 0.8;
+}
+
+.artefacts_by_mueum  .museums_to_sort_by .active_museum, .specific_works .areas_to_sort_by .active_museum{
+    box-shadow: 0px 0px 0px 2px var(--accent);
+}
+
+.museums_to_sort_by .swiper-horizontal>.swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal{
+    position: relative;
+    margin-top: 30px;
+    left: 0;
+    background-color: rgba(0,0,0,.5);
+    height: 3px;
+    width: 100%;
+}
+
+
+.artefacts_by_mueum .swiper-scrollbar-drag, .specific_works .areas_to_sort_by .swiper-scrollbar-drag{
+    background-color: var(--accent);
+}
+
+
+
+
+/* certain artefact */
+
+.certain_artefact{
+    overflow: hidden;
+}
+
+.certain_artefact h1{
+    margin-bottom: 0;
+}
+
+.certain_artefact .descr_arrows{
+    margin: 30px 0 35px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.certain_artefact .specification p{
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: calc(14px + 2 * (100vw / 1780));
+    margin-bottom: calc(50px + 50 * (100vw / 1780));
+}
+
+.certain_artefact .artefact_slider{
+}
+
+.certain_artefact .artefact_slider .swiper-wrapper .swiper-slide{
+    width: unset;
+    height: calc(70px + 550 * (100vw  / 1780));
+}
+
+.certain_artefact .artefact_slider .swiper-wrapper .swiper-slide img{
+    height: calc(70px + 550 * (100vw  / 1780));
+}
+
+.certain_artefact .specification {
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.certain_artefact .specification ul li span{
+    font-size: calc(14px + 2 * (100vw / 1780));
+}
+
+.certain_artefact .specification ul li{
+    display: grid;
+    grid-template-columns: max-content 1fr max-content;
+    align-items: flex-end;
+    grid-gap: 5px;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.certain_artefact .specification ul li span:nth-child(1){
+    font-family: "BebasNeue", sans-serif;
+    color: var(--secondaccent);
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.certain_artefact .specification ul li .dotted_line{
+
+    height: 2px;
+    width: 100%;
+    margin: 0 0 4px 0px;
+    opacity: 0.15;
+    overflow: hidden;
+    position: relative;
+}
+
+.certain_artefact .specification ul li .dotted_line:after{
+    content: "";
+    position: absolute;
+    border-bottom: 3.5px dashed #eee;
+    width: 100%;
+    height: 4px;
+}
+
+
+/* museums page */
+
+
+.museums .museum_container{
+    position: relative;
+    margin-bottom: calc(50px + 80 * (100vw / 1780));
+}
+
+.museums .museum_container .museum_img{
+    width: 50%;
+    height: calc(100px + 450 * (100vw / 1780));
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.museums .museum_container:nth-child(odd) .museum_img{
+    margin: 0 0 0 auto;
+}
+
+.museums .museum_container:nth-child(odd) .museum_descr{
+    right: unset;
+    left: calc(0px + 30 * (100vw / 1780));
+}
+
+.museums .museum_container .museum_descr{
+    background-color: rgba(13, 19, 18, .9);
+    position: absolute;
+    max-width: calc(200px + 700 * (100vw  / 1780));
+    width: 100%;
+    height: fit-content;
+    min-height: 300px;
+    right: calc(0% + 30 * (100vw / 1780));
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    padding: calc(20px + 20 * (100vw / 1780));
+    color: #fff;
+    z-index: 1;
+}
+
+.museums .museum_container .museum_descr h4{
+    margin-bottom: calc(20px + 20 * (100vw / 1780));
+}
+
+.museums .museum_container .museum_descr p{
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+.museums .museum_container .museum_descr .button{
+    margin-top: calc(15px + 35 * (100vw / 1780));
+}
+
+
+/* team member */
+.our_team .team_common_descr{
+    margin-bottom: calc(40px + 60 * (100vw / 1780));
+}
+
+.our_team .team_common_descr p{
+    margin-bottom: 20px;
+}
+
+.our_team .team_members_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 30px;
+}
+
+.our_team .team_members_container .team_member{
+    color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    padding: calc(40px + 20 * (100vw / 1780)) 25px;
+    border: 1px solid rgba(255, 255, 255, .05);
+    position: relative;
+    transition: .3s ease;
+}
+
+.our_team .team_members_container .team_member:hover{
+    box-shadow: 0 0 20px 2px rgba(0,0,0,.3);
+}
+
+.our_team .team_members_container .team_member .team_member_vk{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    transition: .3s ease;
+    padding: 30px;
+}
+
+.our_team .team_members_container .team_member .team_member_vk:hover{
+    opacity: 0.5;
+}
+
+.our_team .team_members_container .team_member .team_member_img_container{
+    width: calc(100px + 100 * (100vw / 1780));
+    height: calc(100px + 100 * (100vw / 1780));
+    overflow: hidden;
+    border-radius: 100%;
+    margin-bottom: calc(10px + 20 * (100vw / 1780));
+}
+
+.our_team .team_members_container .team_member strong{
+    margin-bottom: 10px;
+    font-size: calc(16px + 4 * (100vw / 1780));
+}
+
+.our_team .team_members_container .team_member span{
+    font-size: calc(12px + 2 * (100vw / 1780));
+    font-weight: 300;
+}
+
+.our_team .team_members_container .team_member .team_member_img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* scientific works */
+
+.specific_works .container{
+    overflow-x: hidden;
+}
+
+.specific_works .works_container .name_container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.specific_works .works_container .name_container img{
+    transition: .3s ease;
+}
+
+.specific_works .works_container .work_item {
+    margin-bottom: 40px;
+    position: relative;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.specific_works .works_container .work_item:hover .dashed_line{
+    opacity: 0.4;
+}
+
+.specific_works .works_container .dashed_line{
+    position: absolute;
+    bottom: calc(-5px - 10 * (100vw / 1780));
+    width: 100%;
+    height: 1px;
+    overflow: hidden;
+    opacity: 0.15;
+    transition: .3s ease;
+}
+
+.specific_works .works_container .dashed_line::after{
+    content: "";
+    position: absolute;
+    border-bottom: 2px dashed #eee;
+    width: 100%;
+    height: 2px;
+}
+
+.specific_works .works_container .work_item iframe{
+    height: 0;
+    width: 100%;
+    border: none;
+    transition: .2s ease;
+    margin: 0;
+}
+
+.specific_works .works_container .work_item span{
+    font-family: "BebasNeue", sans-serif;
+    color: var(--secondaccent);
+    font-size: calc(16px + 6 * (100vw / 1780));
+    font-weight: bold;
+    padding-right: 20px;
+}
+
+.dn{
+    display: none;
+}
+
+.specific_works .works_container .work_item .h100{
+    height: 600px; 
+    margin: 20px 0; 
+}
+
+.arrow_rotate{
+    transform: rotate(-180deg);
+}
+
+.specific_works .works_container .hide{
+    height: 0;
+    margin: 0;
+    opacity: 0;
+}

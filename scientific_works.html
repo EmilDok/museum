@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link type="image/x-icon" href="../images/fav.svg" rel="shortcut icon">
+
+    <title>Музей XXI века</title>
+
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+
+
+</head>
+
+<body>
+    
+    <header>
+        <div class="container">
+            <img src="images/logo.svg" alt="logo" class="logo">
+            <nav class="menu">
+                <div class="burger_menu">
+                    <span></span>
+                </div>
+                <div class="menu_items_container">
+                    <ul class="menu_items">
+                        <li><a href="#">Главная</a></li>
+                        <li><a href="#">Научно-исследовательские работы</a></li>
+                        <li><a href="#">Музеи Сарапульского района</a></li>
+                        <li><a href="#">Наша команда</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="specific_works">
+            <div class="container">
+                
+                <h1>Научно-исследовательские работы</h1>
+
+                <div class="areas_to_sort_by">
+                    <ul class="swiper-wrapper" >
+                        <li class="swiper-slide grid-item active_museum" style="background-image: linear-gradient( rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) );" data-filter="*"><span>Все музеи</span></li>
+                        <li class="swiper-slide grid-item" style="background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(images/museums/Кигбаевская\ школа.jpg);" data-filter="choto1"><span>ЗДарова1</span></li>
+                        <li class="swiper-slide grid-item" style="background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(images/museums/Сигаевская\ библиотека.jpg);" data-filter="choto2"><span>ЗДарова2</span></li>
+                        <li class="swiper-slide grid-item" style="background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(images/museums/Сигаевская\ школа.jpg);" data-filter="choto3"><span>ЗДарова3</span></li>
+                        <li class="swiper-slide grid-item" style="background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(images/museums/Шевырялово.jpg);" data-filter="choto4"><span>ЗДарова4</span></li>
+                        <li class="swiper-slide grid-item" style="background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(images/museums/Юринская\ школа.jpg);" data-filter="choto5"><span>ЗДарова5</span></li>
+                        <li class="swiper-slide grid-item" style="background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(images/museums/Кузница\ Морок.jpg);" data-filter="choto6"><span>ЗДарова6</span></li>
+                    </ul>
+                    <div class="swiper-scrollbar">
+
+                    </div>
+                </div>
+
+                <div class="works_container">
+                    <div class="work_item choto2 choto3">
+                        <div class="name_container">
+                            <span>Исследование каких-нибудь артефактов 1</span>
+                            <img src="images/arrow-down.svg" alt="arrow">
+                        </div>
+                        
+                        <iframe src="works/1.pdf" class="dn"></iframe>
+                        <div class="dashed_line"></div>
+                    </div>
+                    <div class="work_item choto1">
+                        <div class="name_container">
+                            <span>насколько хорошо сохраняется одежда солдат</span>
+                            <img src="images/arrow-down.svg" alt="arrow">    
+                        </div>
+                        <iframe src="works/2.pdf" class="dn"></iframe>
+                        <div class="dashed_line"></div>
+                    </div>
+                    <div class="work_item choto2">
+                        <div class="name_container">
+                            <span>Самые редкие артефакты второй мировой в ленинградской области</span>
+                            <img src="images/arrow-down.svg" alt="arrow">
+                        </div>  
+                        <iframe src="works/2.pdf" class="dn"></iframe>
+                        <div class="dashed_line"></div>
+                    </div>
+                    <div class="work_item choto2 choto3">
+                        <div class="name_container">
+                            <span>насколько хорошо сохраняется одежда солдат 2</span>
+                            <img src="images/arrow-down.svg" alt="arrow">
+                        </div>
+                        <iframe src="works/2.pdf" class="dn"></iframe>
+                        <div class="dashed_line"></div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    
+    <footer>
+        <div class="container">
+
+            <div class="logo_contacts">
+                <img src="images/logo.svg" alt="logo">
+
+                <div class="contacts_container">
+                    <a href="https://yandex.ru/maps/-/CCUR58DC0B">Удмуртская респ., Сарапульский район, с. Сигаево, ул. Советская, 58</a>
+                    <a href="mailto:alexandergaf@gmail.com">alexandergaf@gmail.com</a>
+                    <a href="tel:0800332175">8 (34147) 24-6-47</a>
+                </div>
+            </div>
+
+            <div id="vk_groups1"></div>
+            <div id="vk_groups2"></div>
+            <div id="vk_groups3"></div>
+            <div id="vk_groups4"></div>
+
+
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="https://vk.com/js/api/openapi.js?169"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script src="script.js"></script>
+
+    <script>
+        const swiper = new Swiper('.areas_to_sort_by', {
+            // Optional parameters
+            // loop: true,
+            scrollbar: {
+                el: '.swiper-scrollbar',
+                draggable: true,
+            },
+            spaceBetween: 20,
+            slidesPerView: "auto"
+            // And if we need scrollbar
+            // scrollbar: {
+            //     el: '.swiper-scrollbar',
+            // },
+        });
+
+
+
+
+        let works = document.querySelectorAll('.work_item');
+
+        works.forEach(work => {
+            work.addEventListener('click', (e) => {
+
+                let iframe = work.querySelector('iframe');
+
+                if (iframe.classList.contains('dn')){
+                    
+                    iframe.classList.remove('dn');
+                    setTimeout(() =>iframe.classList.add('h100'), 1);
+                    work.querySelector('img').classList.add('arrow_rotate');
+                    
+                }
+                else{
+                    iframe.classList.remove('h100');
+                    setTimeout(() =>iframe.classList.add('dn'), 200);
+                    work.querySelector('img').classList.remove('arrow_rotate');
+                }
+            });
+        });
+
+        let filters = document.querySelectorAll('.areas_to_sort_by .grid-item');
+        let imagesFiltered = document.querySelectorAll('.works_container .work_item');
+
+        filters.forEach(filter => {
+
+            filter.addEventListener('click', ev => {
+
+                let filterClass = filter.dataset['filter'];
+
+                imagesFiltered.forEach(el => {
+
+                    if (!el.classList.contains(filterClass) && filterClass !== '*') {
+                        el.classList.add('hide');
+                        setTimeout(() => el.classList.add('dn'), 300);
+                    } else {
+                        el.classList.remove('dn');
+                        setTimeout(() => el.classList.remove('hide'), 1);
+                    }
+                    
+                });
+            });
+
+        });
+    </script>
+</body>

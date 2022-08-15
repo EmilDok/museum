@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link type="image/x-icon" href="../images/fav.svg" rel="shortcut icon">
+
+    <title>Музей XXI века</title>
+
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <img src="images/logo.svg" alt="logo" class="logo">
+            <nav class="menu">
+                <div class="burger_menu">
+                    <span></span>
+                </div>
+                <div class="menu_items_container">
+                    <ul class="menu_items">
+                        <li><a href="#">Главная</a></li>
+                        <li><a href="#">Научно-исследовательские работы</a></li>
+                        <li><a href="#">Музеи Сарапульского района</a></li>
+                        <li><a href="#">Наша команда</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+
+    <main>
+        
+        <section class="certain_artefact">
+            <div class="container">
+
+                <div class="artefact_slider">
+                    <div class="swiper-wrapper" >
+                        <div class="swiper-slide">
+                            <img src="images/artefacts/1/ротатор 1.jpg" alt="img">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/artefacts/1/ротатор 2.jpg" alt="img">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/artefacts/1/ротатор 3.jpg" alt="img">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/artefacts/1/ротатор 4.jpg" alt="img">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="specification">
+                    <div class="descr_arrows">
+                        <h1>Ротатор</h1>
+                        <div class="arrows_container">
+                            <img class="swiper-button-prev" src="images/arrow-left.svg" alt="arrow">
+                            <img class="swiper-button-next" src="images/arrow-right.svg" alt="arrow">
+                        </div>
+    
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima autem, atque nostrum odio veritatis quis maxime mollitia sunt nulla eligendi.</p>
+                    <ul>
+                        <li>
+                            <span>Место хранения:</span>
+                            <div class="dotted_line"></div>
+                            <span>Центральная районная детская библиотека МБУК «МЦР Сарапульского района»</span>
+                        </li>
+                        <li>
+                            <span>Инвентарный номер:</span>
+                            <div class="dotted_line"></div>
+                            <span>03-02-0031</span>
+                        </li>
+                        <li>
+                            <span>Место и время изготовления:</span>
+                            <div class="dotted_line"></div>
+                            <span>СССР, 1980 г.</span>
+                        </li>
+                        <li>
+                            <span>Материал:</span>
+                            <div class="dotted_line"></div>
+                            <span>Металл, пластик, резина</span>
+                        </li>
+                        <li>
+                            <span>Размер:</span>
+                            <div class="dotted_line"></div>
+                            <span>21-21-27</span>
+                        </li>
+                        <li>
+                            <span>Сохранность:</span>
+                            <div class="dotted_line"></div>
+                            <span>Хорошая</span>
+                        </li>
+                    </ul>
+                </div>
+                <a href="#" class="button">Перейти к экспонатам</a>
+            </div>
+
+
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+
+            <div class="logo_contacts">
+                <img src="images/logo.svg" alt="logo">
+
+                <div class="contacts_container">
+                    <a href="https://yandex.ru/maps/-/CCUR58DC0B">Удмуртская респ., Сарапульский район, с. Сигаево, ул. Советская, 58</a>
+                    <a href="mailto:alexandergaf@gmail.com">alexandergaf@gmail.com</a>
+                    <a href="tel:0800332175">8 (34147) 24-6-47</a>
+                </div>
+            </div>
+
+            <div id="vk_groups1"></div>
+            <div id="vk_groups2"></div>
+            <div id="vk_groups3"></div>
+            <div id="vk_groups4"></div>
+
+
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="https://vk.com/js/api/openapi.js?169"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+
+    <script src="script.js"></script>
+
+    <script>
+        const swiper = new Swiper('.artefact_slider', {
+            // Optional parameters
+            loop: true,
+            slidesPerView: 'auto',
+            spaceBetween: 20,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // And if we need scrollbar
+            // scrollbar: {
+            //     el: '.swiper-scrollbar',
+            // },
+        });
+
+       
+    </script>
+    
+</body>
+</html>
