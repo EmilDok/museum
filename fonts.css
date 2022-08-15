@@ -1,61 +1,61 @@
 
 @font-face {
     font-family: "BebasNeue";
-    src: url("../fonts/bebasneuebold.woff") format("woff");
+    src: url("fonts/bebasneuebold.woff") format("woff");
     font-weight: bold; 
 }
 
 @font-face {
     font-family: "BebasNeue";
-    src: url("../fonts/bebasneuebook.woff") format("woff");
+    src: url("fonts/bebasneuebook.woff") format("woff");
     font-weight: 350; 
 } 
 
 @font-face {
     font-family: "BebasNeue";
-    src: url("../fonts/bebasneuelight.woff") format("woff");
+    src: url("fonts/bebasneuelight.woff") format("woff");
     font-weight: 300; 
 } 
 
 @font-face {
     font-family: "BebasNeue";
-    src: url("../fonts/bebasneueregular.woff") format("woff");
+    src: url("fonts/bebasneueregular.woff") format("woff");
     font-weight: 400; 
 } 
 
 
 @font-face {
     font-family: "Roboto";
-    src: url("../fonts/Roboto.woff") format("woff");
+    src: url("fonts/Roboto.woff") format("woff");
     font-weight: normal; 
 } 
 
 @font-face {
     font-family: "Roboto";
-    src: url("../fonts/Robotoblack.woff") format("woff");
+    src: url("fonts/Robotoblack.woff") format("woff");
     font-weight: 900; 
 } 
 
 @font-face {
     font-family: "Roboto";
-    src: url("../fonts/Robotobold.woff") format("woff");
+    src: url("fonts/Robotobold.woff") format("woff");
     font-weight: 700; 
 } 
 
 @font-face {
     font-family: "Roboto";
-    src: url("../fonts/Robotolight.woff") format("woff");
+    src: url("fonts/Robotolight.woff") format("woff");
     font-weight: 300; 
 } 
 
 @font-face {
     font-family: "Roboto";
-    src: url("../fonts/Robotomedium.woff") format("woff");
+    src: url("fonts/Robotomedium.woff") format("woff");
     font-weight: 500; 
 } 
 
 @font-face {
     font-family: "Roboto";
-    src: url("../fonts/Robotothin.woff") format("woff");
+    src: url("fonts/Robotothin.woff") format("woff");
     font-weight: 100; 
 } 
