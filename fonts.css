@@ -26,36 +26,36 @@
 
 @font-face {
     font-family: "Roboto";
-    src: url("fonts/Roboto.woff") format("woff");
-    font-weight: normal; 
+    src: url("fonts/Jost-Regular.woff") format("woff");
+    font-weight: 400; 
 } 
 
 @font-face {
     font-family: "Roboto";
-    src: url("fonts/Robotoblack.woff") format("woff");
+    src: url("fonts/Jost-Black.woff") format("woff");
     font-weight: 900; 
 } 
 
 @font-face {
     font-family: "Roboto";
-    src: url("fonts/Robotobold.woff") format("woff");
+    src: url("fonts/Jost-Bold.woff") format("woff");
     font-weight: 700; 
 } 
 
 @font-face {
     font-family: "Roboto";
-    src: url("fonts/Robotolight.woff") format("woff");
+    src: url("fonts/Jost-Light.woff") format("woff");
     font-weight: 300; 
 } 
 
 @font-face {
     font-family: "Roboto";
-    src: url("fonts/Robotomedium.woff") format("woff");
+    src: url("fonts/Jost-Regular.woff") format("woff");
     font-weight: 500; 
 } 
 
 @font-face {
     font-family: "Roboto";
-    src: url("fonts/Robotothin.woff") format("woff");
+    src: url("fonts/Jost-Thin.woff") format("woff");
     font-weight: 100; 
 } 

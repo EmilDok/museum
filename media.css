@@ -25,9 +25,11 @@
     .museums .museum_container .museum_descr{
         position: relative;
         width: 100%;
+        height: unset;
         max-width: 100%;
         right: 0;
         left: 0;
+        min-height: unset;
     }
 
     .slider_container .swiper-slide .images_container .item_pic:nth-child(n + 2){
@@ -41,19 +43,27 @@
     .slider_container_with_thumbs{
         display: block;
     }
+    
+    footer .container{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+/* 
+    footer .logo_contacts{
+        grid-column: 1 / 2;
+    }
 
     footer #vk_groups1{
-        grid-column: 2 / 4;
+        grid-column: 3 / 4;
     }
     footer #vk_groups2{
-        grid-column: 4 / 6;
-    }
+        grid-column: 5 / 6;
+    }*/
     footer #vk_groups3{
-        grid-column: 2 / 4;
+        grid-column: 2 / 3;
     }
     footer #vk_groups4{
-        grid-column: 4 / 6;
-    }
+        grid-column: 3 / 4;
+    } 
 
     .artefacts_by_mueum .artefacts_container .artefact_pic{
         width: calc(50% - 30px);
@@ -132,6 +142,20 @@
 
 
 @media (max-width: 900px) {
+
+    .arrows_container img:hover{
+        opacity: 1;
+    }
+
+    .certain_artefact .descr_arrows{
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .certain_artefact .descr_arrows .arrows_container{
+        margin-bottom: 50px;
+    }
 
     .our_team .team_members_container{
         grid-template-columns: 1fr 1fr;

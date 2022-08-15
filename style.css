@@ -78,14 +78,14 @@ h1{
     /* font-size: 54px; */
     font-weight: bold;
     position: relative;
-    margin-bottom: calc(40px + 40 * (100vw / 1780));
+    margin-bottom: calc(30px + 40 * (100vw / 1780));
 }
 
 h1:after{
     content: "";
     display: block;
     position: absolute;
-    bottom: calc(-8px - 7 * (100vw / 1780));
+    bottom: calc(-22px + 15 * (100vw / 1780));
     left: 0;
     width: calc(85px + 15 * (100vw / 1780));
     height: 8px;
@@ -188,9 +188,9 @@ button{
 p{
     color: #fff;
     font-family: "Roboto", sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 300;
-    line-height: 1.75;
+    line-height: 1.35;
     letter-spacing: 0.4px;
 }
 
@@ -201,6 +201,10 @@ p{
     --secondaccent: #E4B284;
     --sectionmargin: 9.5vw;
     --margintitle: 3.5vw;
+}
+
+.swiper-button-next, .swiper-button-prev{
+    outline: none;
 }
 
 
@@ -222,7 +226,7 @@ header .container{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 25px 20px;
+    padding: 25px 10px;
 }
 
 header .container .menu .menu_items{
@@ -610,7 +614,7 @@ header .logo, footer .logo{
 .share_archives .form_contacts_container .contacts_container .contacts_item a{
     font-size: calc(14px + 2 * (100vw / 1780));
     font-family: "Roboto", sans-serif;
-    font-weight: 200;
+    font-weight: 300;
     transition: .2s ease;
 }
 
@@ -675,7 +679,7 @@ footer .container{
 .container .logo_contacts .contacts_container a{
     margin-bottom: 20px;
     display: block;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 300;
     transition: .2s ease;
 }
@@ -754,7 +758,7 @@ footer .container{
 
 .artefacts_by_mueum .artefacts_container .artefact_pic .descr_container h3{
     font-family: "Roboto", sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 500;
     margin-bottom: 2px;
 }
@@ -838,7 +842,8 @@ footer .container{
 /* certain artefact */
 
 .certain_artefact{
-    overflow: hidden;
+    overflow-x: hidden;
+    padding: 0 0 6px 0;
 }
 
 .certain_artefact h1{
@@ -860,8 +865,10 @@ footer .container{
     margin-bottom: calc(50px + 50 * (100vw / 1780));
 }
 
-.certain_artefact .artefact_slider{
-}
+/* .certain_artefact .artefact_slider .swiper-slide-prev{
+    transition: .35s ease;
+    opacity: 0;
+} */
 
 .certain_artefact .artefact_slider .swiper-wrapper .swiper-slide{
     width: unset;
@@ -873,12 +880,12 @@ footer .container{
 }
 
 .certain_artefact .specification {
-    margin-top: 30px;
+    margin-top: calc(10px + 20 * (100vw / 1780));
     margin-bottom: 50px;
 }
 
 .certain_artefact .specification ul li span{
-    font-size: calc(14px + 2 * (100vw / 1780));
+    font-size: calc(12px + 4 * (100vw / 1780));
 }
 
 .certain_artefact .specification ul li{
@@ -995,7 +1002,7 @@ footer .container{
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
-    padding: calc(40px + 20 * (100vw / 1780)) 25px;
+    padding: calc(40px + 20 * (100vw / 1780)) 30px;
     border: 1px solid rgba(255, 255, 255, .05);
     position: relative;
     transition: .3s ease;
@@ -1070,7 +1077,7 @@ footer .container{
 
 .specific_works .works_container .dashed_line{
     position: absolute;
-    bottom: calc(-5px - 10 * (100vw / 1780));
+    bottom: calc(-5px - 5 * (100vw / 1780));
     width: 100%;
     height: 1px;
     overflow: hidden;

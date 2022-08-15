@@ -55,7 +55,7 @@
                             <img src="images/artefacts/1/ротатор 2.jpg" alt="img">
                         </div>
                         <div class="swiper-slide">
-                            <img src="images/artefacts/1/ротатор 3.jpg" alt="img">
+                            <img src="images/artefacts/5/P1210561.JPG" alt="img">
                         </div>
                         <div class="swiper-slide">
                             <img src="images/artefacts/1/ротатор 4.jpg" alt="img">
@@ -66,7 +66,7 @@
 
                 <div class="specification">
                     <div class="descr_arrows">
-                        <h1>Ротатор</h1>
+                        <h1>Шеврон военнослужащего кремлёвского полка</h1>
                         <div class="arrows_container">
                             <img class="swiper-button-prev" src="images/arrow-left.svg" alt="arrow">
                             <img class="swiper-button-next" src="images/arrow-right.svg" alt="arrow">
@@ -146,13 +146,27 @@
     <script>
         const swiper = new Swiper('.artefact_slider', {
             // Optional parameters
+            autoplay: {
+                delay: 1500,
+            },
             loop: true,
             slidesPerView: 'auto',
-            spaceBetween: 20,
+            spaceBetween: 30,
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
             },
+            breakpoints: {
+                320: {
+                    spaceBetween: 15
+                }, 
+                900: {
+                    spaceBetween: 20
+                },
+                1100: {
+                    spaceBetween: 30
+                }
+            }
 
             // And if we need scrollbar
             // scrollbar: {
