@@ -6,10 +6,15 @@ burgerMenu.addEventListener('click',function(){
 });
 
 if (window.innerWidth >= 1200) {
-    VK.Widgets.Group("vk_groups1", {mode: 4, no_cover: 1, width: "auto", height: "306", color1: '1D2926', color2: 'FFFFFF', color3: 'FFFFFF'}, 143830192);
-    VK.Widgets.Group("vk_groups4", {mode: 4, no_cover: 1, width: "auto", height: "306", color1: '1D2926', color2: 'FFFFFF', color3: 'FFFFFF'}, 90727683);
-    VK.Widgets.Group("vk_groups2", {mode: 4, no_cover: 1, width: "auto", height: "306", color1: '1D2926', color2: 'FFFFFF', color3: 'FFFFFF'}, 210719358);
-    VK.Widgets.Group("vk_groups3", {mode: 4, no_cover: 1, width: "auto", height: "306", color1: '1D2926', color2: 'FFFFFF', color3: 'FFFFFF'}, 152680858);
+    VK.Widgets.Group("vk_groups1", {mode: 4, no_cover: 1, width: "auto", height: "323", color1: '1D2926', color2: 'FFFFFF', color3: 'FFFFFF'}, 143830192);
+    VK.Widgets.Group("vk_groups4", {mode: 4, no_cover: 1, width: "auto", height: "323", color1: '1D2926', color2: 'FFFFFF', color3: 'FFFFFF'}, 90727683);
+    VK.Widgets.Group("vk_groups2", {mode: 4, no_cover: 1, width: "auto", height: "323", color1: '1D2926', color2: 'FFFFFF', color3: 'FFFFFF'}, 210719358);
+    VK.Widgets.Group("vk_groups3", {mode: 4, no_cover: 1, width: "auto", height: "323", color1: '1D2926', color2: 'FFFFFF', color3: 'FFFFFF'}, 152680858);
+} else if (window.innerWidth >= 700) {
+    VK.Widgets.Group("vk_groups1", {mode: 4, no_cover: 1, width: "auto", height: "350", color1: '1D2926', color2: 'FFFFFF', color3: 'FFFFFF'}, 143830192);
+    VK.Widgets.Group("vk_groups4", {mode: 4, no_cover: 1, width: "auto", height: "350", color1: '1D2926', color2: 'FFFFFF', color3: 'FFFFFF'}, 90727683);
+    VK.Widgets.Group("vk_groups2", {mode: 4, no_cover: 1, width: "auto", height: "350", color1: '1D2926', color2: 'FFFFFF', color3: 'FFFFFF'}, 210719358);
+    VK.Widgets.Group("vk_groups3", {mode: 4, no_cover: 1, width: "auto", height: "350", color1: '1D2926', color2: 'FFFFFF', color3: 'FFFFFF'}, 152680858);
 } else {
     VK.Widgets.Group("vk_groups1", {mode: 1, no_cover: 1, width: "auto", height: "350", color1: '1D2926', color2: 'FFFFFF', color3: 'FFFFFF'}, 143830192);
     VK.Widgets.Group("vk_groups4", {mode: 1, no_cover: 1, width: "auto", height: "350", color1: '1D2926', color2: 'FFFFFF', color3: 'FFFFFF'}, 90727683);

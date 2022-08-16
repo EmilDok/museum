@@ -47,7 +47,7 @@
                 <div class="timetabs_arrows">
     
                     <ul class="timetabs">
-                        <li>Российская империя</li>
+                        <li class="active_timetab">Российская империя</li>
                         <li>СССР</li>
                         <li>Российская федерация</li>
                     </ul>
@@ -302,8 +302,90 @@
     <script src="script.js"></script>
 
     <script>
-       
 
+        let slidesInfo = [
+            [
+                {
+                    title: "Ротатор",
+                    museum: "Центральная районная детская библиотека МБУК «МЦР Сарапульского района»",
+                    year: "СССР, 1980 г.",
+                    first_picture: "images/artefacts/1/ротатор 1.jpg",
+                    second_picture: "images/artefacts/1/ротатор 2.jpg",
+                    third_picture: "images/artefacts/1/ротатор 3.jpg",
+                    fourth_picture: "images/artefacts/1/ротатор 4.jpg"
+                },{
+                    title: "Журнал «Деревенский коммунист»",
+                    museum: "Центральная районная детская библиотека МБУК «МЦР Сарапульского района»",
+                    year: "СССР, 1980 г.",
+                    first_picture: "images/artefacts/1/ротатор 2.jpg",
+                    second_picture: "images/artefacts/1/ротатор 3.jpg",
+                    third_picture: "images/artefacts/1/ротатор 4.jpg",
+                    fourth_picture: "images/artefacts/1/ротатор 1.jpg"
+                },{
+                    title: "Нагрудный знак «За отличную стрельбу»",
+                    museum: "Центральная районная детская библиотека МБУК «МЦР Сарапульского района»",
+                    year: "СССР, 1980 г.",
+                    first_picture: "images/artefacts/1/ротатор 2.jpg",
+                    second_picture: "images/artefacts/1/ротатор 2.jpg",
+                    third_picture: "images/artefacts/1/ротатор 2.jpg",
+                    fourth_picture: "images/artefacts/1/ротатор 2.jpg"
+                }
+            ],[
+                {
+                    title: "Ротатор2",
+                    museum: "Центральная районная детская библиотека МБУК «МЦР Сарапульского района»",
+                    year: "СССР, 1980 г.",
+                    first_picture: "images/artefacts/1/ротатор 1.jpg",
+                    second_picture: "images/artefacts/1/ротатор 2.jpg",
+                    third_picture: "images/artefacts/1/ротатор 3.jpg",
+                    fourth_picture: "images/artefacts/1/ротатор 4.jpg"
+                },{
+                    title: "Журнал «Деревенский коммунист»2",
+                    museum: "Центральная районная детская библиотека МБУК «МЦР Сарапульского района»",
+                    year: "СССР, 1980 г.",
+                    first_picture: "images/artefacts/1/ротатор 2.jpg",
+                    second_picture: "images/artefacts/1/ротатор 3.jpg",
+                    third_picture: "images/artefacts/1/ротатор 4.jpg",
+                    fourth_picture: "images/artefacts/1/ротатор 1.jpg"
+                },{
+                    title: "Нагрудный знак «За отличную стрельбу»2",
+                    museum: "Центральная районная детская библиотека МБУК «МЦР Сарапульского района»",
+                    year: "СССР, 1980 г.",
+                    first_picture: "images/artefacts/1/ротатор 2.jpg",
+                    second_picture: "images/artefacts/1/ротатор 2.jpg",
+                    third_picture: "images/artefacts/1/ротатор 2.jpg",
+                    fourth_picture: "images/artefacts/1/ротатор 2.jpg"
+                }
+            ],[
+                {
+                    title: "Ротатор3",
+                    museum: "Центральная районная детская библиотека МБУК «МЦР Сарапульского района»",
+                    year: "СССР, 1980 г.",
+                    first_picture: "images/artefacts/1/ротатор 1.jpg",
+                    second_picture: "images/artefacts/1/ротатор 2.jpg",
+                    third_picture: "images/artefacts/1/ротатор 3.jpg",
+                    fourth_picture: "images/artefacts/1/ротатор 4.jpg"
+                },{
+                    title: "Журнал «Деревенский коммунист»3",
+                    museum: "Центральная районная детская библиотека МБУК «МЦР Сарапульского района»",
+                    year: "СССР, 1980 г.",
+                    first_picture: "images/artefacts/1/ротатор 2.jpg",
+                    second_picture: "images/artefacts/1/ротатор 3.jpg",
+                    third_picture: "images/artefacts/1/ротатор 4.jpg",
+                    fourth_picture: "images/artefacts/1/ротатор 1.jpg"
+                },{
+                    title: "Нагрудный знак «За отличную стрельбу»3",
+                    museum: "Центральная районная детская библиотека МБУК «МЦР Сарапульского района»",
+                    year: "СССР, 1980 г.",
+                    first_picture: "images/artefacts/1/ротатор 2.jpg",
+                    second_picture: "images/artefacts/1/ротатор 2.jpg",
+                    third_picture: "images/artefacts/1/ротатор 2.jpg",
+                    fourth_picture: "images/artefacts/1/ротатор 2.jpg"
+                }
+            ]
+        ];
+
+       
         const swiper2 = new Swiper('.our_partners_slider', {
             // Optional parameters
             // loop: true,
@@ -367,6 +449,7 @@
             };
 
             const swiper = new Swiper('.our_artefacts_slider', parameters);
+            
         } else {
 
             let parameters = {
@@ -393,6 +476,52 @@
             };
 
             const swiper = new Swiper('.our_artefacts_slider', parameters);
+
+            let timetabs = document.querySelectorAll('.timetabs_arrows .timetabs li');
+
+            for (let i = 0; i < timetabs.length; i++) {
+
+                timetabs[i].addEventListener('click', function() {
+
+                    timetabs.forEach(tab => {
+                        tab.classList.remove('active_timetab');
+                    })
+
+                    timetabs[i].classList.add('active_timetab');
+
+                    swiper.removeAllSlides();
+
+                    let slide_string = "";
+
+
+                        slidesInfo[i].forEach(sl => {
+                            slide_string += `<div class="swiper-slide">
+                                <div class="images_container">
+                                    <div class="item_pic first_pic" style='background-image: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1)), url("${sl.first_picture}" )' >
+                                        <div class="descr_item_container">
+                                            <h2>${sl.title}</h2>
+                                            <div class="museum_year_container">
+                                                <a href="#">${sl.museum}</a>
+                                                <span class="year">${sl.year}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item_pic second_pic" style='background-image: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1)), url("${sl.second_picture}" )' ></div>
+                                    <div class="item_pic third_pic" style='background-image: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1)), url("${sl.third_picture}" )' ></div>
+                                    <div class="item_pic fourth_pic" style='background-image: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1)), url("${sl.fourth_picture}" )' ></div>
+                                </div>
+                            </div>`;
+                        })
+                        
+                        
+                    
+                    swiper.appendSlide(slide_string);
+                })
+                
+            }
+
+
+            
         }
     </script>
 </body>

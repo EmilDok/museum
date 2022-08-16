@@ -51,7 +51,7 @@ a{
 body{
     background-color: #1D2926;
     background-image: url('images/texture.png');
-    font-family: "Roboto", sans-serif;
+    font-family: "Jost", sans-serif;
     min-height: 100vh;
     font-size: 16px;
     scroll-behavior: smooth;
@@ -187,7 +187,7 @@ button{
 
 p{
     color: #fff;
-    font-family: "Roboto", sans-serif;
+    font-family: "Jost", sans-serif;
     font-size: 16px;
     font-weight: 300;
     line-height: 1.35;
@@ -239,7 +239,7 @@ header .container .menu .menu_items li{
 }
 
 header .container .menu .menu_items a{
-    font-family: "Roboto", sans-serif;
+    font-family: "Jost", sans-serif;
     font-weight: 400;
     position: relative;
     transition: .25s ease;
@@ -423,7 +423,7 @@ header .logo, footer .logo{
 
 .slider_container .swiper-slide .descr_item_container .museum_year_container .year {
     color: #fff;
-    font-family: "Roboto", sans-serif;
+    font-family: "Jost", sans-serif;
     font-weight: 300;
     font-size: calc(12px + 4 * (100vw / 1780));
 }
@@ -477,7 +477,7 @@ header .logo, footer .logo{
     position: relative;
 }
 
-.timetabs_arrows .timetabs li:nth-child(1):after{
+.timetabs_arrows .timetabs .active_timetab:after{
     content: "";
     display: block;
     position: absolute;
@@ -531,7 +531,7 @@ header .logo, footer .logo{
 
 .share_archives span{
     font-size: calc(14px + 6 * (100vw / 1780));
-    font-family: "Roboto", sans-serif;
+    font-family: "Jost", sans-serif;
     color: #fff;
     font-weight: 300;
 }
@@ -563,7 +563,7 @@ header .logo, footer .logo{
     color: #fff;
     width: 100%;
     transition: .2s ease;
-    font-family: "Roboto", sans-serif;
+    font-family: "Jost", sans-serif;
     font-weight: 300;
     border-radius: 0;
 }
@@ -613,7 +613,7 @@ header .logo, footer .logo{
 
 .share_archives .form_contacts_container .contacts_container .contacts_item a{
     font-size: calc(14px + 2 * (100vw / 1780));
-    font-family: "Roboto", sans-serif;
+    font-family: "Jost", sans-serif;
     font-weight: 300;
     transition: .2s ease;
 }
@@ -757,7 +757,7 @@ footer .container{
 }
 
 .artefacts_by_mueum .artefacts_container .artefact_pic .descr_container h3{
-    font-family: "Roboto", sans-serif;
+    font-family: "Jost", sans-serif;
     font-size: 16px;
     font-weight: 500;
     margin-bottom: 2px;
@@ -859,7 +859,7 @@ footer .container{
 
 .certain_artefact .specification p{
     color: #fff;
-    font-family: "Roboto", sans-serif;
+    font-family: "Jost", sans-serif;
     font-weight: 300;
     font-size: calc(14px + 2 * (100vw / 1780));
     margin-bottom: calc(50px + 50 * (100vw / 1780));
@@ -970,7 +970,7 @@ footer .container{
 }
 
 .museums .museum_container .museum_descr p{
-    font-size: 14px;
+    font-size: calc(14px + 2 * (100vw / 1780));
     font-weight: 300;
     line-height: 1.8;
 }
