@@ -564,7 +564,7 @@ header .logo, footer .logo{
     width: 100%;
     transition: .2s ease;
     font-family: "Jost", sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     border-radius: 0;
 }
 
@@ -848,6 +848,7 @@ footer .container{
 
 .certain_artefact h1{
     margin-bottom: 0;
+    align-self: flex-start;
 }
 
 .certain_artefact .descr_arrows{
@@ -880,12 +881,13 @@ footer .container{
 }
 
 .certain_artefact .specification {
-    margin-top: calc(10px + 20 * (100vw / 1780));
+    margin-top: calc(30px + 30 * (100vw / 1780));
     margin-bottom: 50px;
 }
 
 .certain_artefact .specification ul li span{
     font-size: calc(12px + 4 * (100vw / 1780));
+    font-weight: 300;
 }
 
 .certain_artefact .specification ul li{
@@ -972,7 +974,6 @@ footer .container{
 .museums .museum_container .museum_descr p{
     font-size: calc(14px + 2 * (100vw / 1780));
     font-weight: 300;
-    line-height: 1.8;
 }
 
 .museums .museum_container .museum_descr .button{

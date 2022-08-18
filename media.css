@@ -143,6 +143,19 @@
 
 @media (max-width: 900px) {
 
+
+    .certain_artefact .artefact_slider .swiper-wrapper .swiper-slide{
+        width: 75%;
+        height: auto;
+    }
+    .certain_artefact .artefact_slider .swiper-wrapper .swiper-slide img{
+        height: 100%;
+        max-height: 500px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 3px;
+    }
+
     .arrows_container img:hover{
         opacity: 1;
     }
@@ -154,7 +167,7 @@
     }
 
     .certain_artefact .descr_arrows .arrows_container{
-        margin-bottom: 50px;
+        display: none;
     }
 
     .our_team .team_members_container{
